@@ -316,14 +316,15 @@ class BLOGS_CTRL_View extends OW_ActionController
 
         $this->addComponent('rate', $rateInfo);
 
+        //Blogs - hide comment for SPOD platform
         // additional components
-        $cmpParams = new BASE_CommentsParams('blogs', 'blog-post');
-        $cmpParams->setEntityId($post->getId())
-            ->setOwnerId($post->getAuthorId())
-            ->setDisplayType(BASE_CommentsParams::DISPLAY_TYPE_BOTTOM_FORM_WITH_FULL_LIST)
-            ->setAddComment($allow_comments);
-
-        $this->addComponent('comments', new BASE_CMP_Comments($cmpParams));
+//        $cmpParams = new BASE_CommentsParams('blogs', 'blog-post');
+//        $cmpParams->setEntityId($post->getId())
+//            ->setOwnerId($post->getAuthorId())
+//            ->setDisplayType(BASE_CommentsParams::DISPLAY_TYPE_BOTTOM_FORM_WITH_FULL_LIST)
+//            ->setAddComment($allow_comments);
+//
+//        $this->addComponent('comments', new BASE_CMP_Comments($cmpParams));
 
         $this->assign('avatarUrl', '');
 
