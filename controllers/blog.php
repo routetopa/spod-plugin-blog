@@ -402,7 +402,8 @@ class BLOGS_CTRL_Blog extends OW_ActionController
 
         $listNames = array(
             'browse-by-tag' => array('iconClass' => 'ow_ic_tag'),
-            'most-discussed' => array('iconClass' => 'ow_ic_comment'),
+            // 2/11/2016: Blogs in SPOD no comment to add to the blog
+            // 'most-discussed' => array('iconClass' => 'ow_ic_comment'),
             'top-rated' => array('iconClass' => 'ow_ic_star'),
             'latest' => array('iconClass' => 'ow_ic_clock')
         );
