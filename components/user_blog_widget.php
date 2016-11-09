@@ -176,7 +176,9 @@ class BLOGS_CMP_UserBlogWidget extends BASE_CLASS_Widget
             self::SETTING_TOOLBAR, array(
             array(
                 'label' => OW::getLanguage()->text('blogs', 'view_all'),
-                'href' => OW::getRouter()->urlForRoute('user-blog', array('user' => $user->getUsername()))
+                //8/11/2016 Change to do
+                //'href' => OW::getRouter()->urlForRoute('user-blog', array('user' => $user->getUsername()))
+                'href' => Ow::getRouter()->urlForRoute('blogs')
             )
             )
         );
