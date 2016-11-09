@@ -25,7 +25,9 @@
 	                       	</div>
 	                     </div>
 
-	                     <center> <span class="ow_ic_up_arrow" style="background-repeat: no-repeat;">&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="{$adjasentUrl.index}">{text key="blogs+blog_index"}</a></center>
+	                    <center> <span class="ow_ic_up_arrow" style="background-repeat: no-repeat;">&nbsp;&nbsp;&nbsp;&nbsp;</span> <a href="{$adjasentUrl.index}">{text key="blogs+blog_index"}</a></center>
+
+
 				{/block_decorator}
                 {/if}
 
@@ -34,7 +36,8 @@
          	</div>
 
             <div class="ow_supernarrow" style="float:right;">
-               {block_decorator name="box" addClass="ow_stdmargin" langLabel="blogs+post_title" iconClass="ow_ic_picture"}
+			   <!-- No comment in SPOD's blog 2/11/2016
+               <!--{block_decorator name="box" addClass="ow_stdmargin" langLabel="blogs+post_title" iconClass="ow_ic_picture"}
                   <table class="ow_table_3 ow_form ow_nomargin">
                      <tbody>
                      	{if $isAuthorExists}
@@ -51,7 +54,7 @@
                         </tr>
                      </tbody>
                   </table>
-               {/block_decorator}
+               {/block_decorator}-->
 
                	{$tagCloud}
 
@@ -60,7 +63,11 @@
 					{block_decorator name="box" langLabel="blogs+blog_archive_lbl_archives" iconClass="ow_ic_clock"}
 					{assign var="uname" value=$author->getUsername() }
 	                  <ul class="ow_regular">
-	                  	<li><a href="{url_for_route for="user-blog:[user=>`$uname`]"}">{text key="base+all"}</a> </li>
+						<!-- "All" btn hide-->
+						<!--
+	                  	<li><a href="{url_for_route for="user-blog:[user=>`$uname`]"}">{text key="base+all"}</a> </li> -->
+						<li><a href="{url_for_route for="user-blog:[user=>`$uname`]"}">{text key="base+all"}</a> </li> -->
+
 	                  	{foreach from=$archive key='year' item='months'}
 	                  		{foreach from=$months item='month'}
 	                  			{assign var='u' value=$author->getUsername()}

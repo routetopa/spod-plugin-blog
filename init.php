@@ -44,6 +44,8 @@ OW::getRouter()->addRoute(new OW_Route('post-approve', 'blogs/post/approve/:id',
 
 OW::getRouter()->addRoute(new OW_Route('post-part', 'blogs/post/:id/:part', "BLOGS_CTRL_View", 'index'));
 
+//Not create the page of a blog of a specific user
+//OW::getRouter()->addRoute(new OW_Route('user-blog', 'blogs/user/:user', "BLOGS_CTRL_UserBlog", 'index'));
 OW::getRouter()->addRoute(new OW_Route('user-blog', 'blogs/user/:user', "BLOGS_CTRL_UserBlog", 'index'));
 
 OW::getRouter()->addRoute(new OW_Route('user-post', 'blogs/:id', "BLOGS_CTRL_View", 'index'));
