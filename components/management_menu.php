@@ -61,14 +61,15 @@ class BLOGS_CMP_ManagementMenu extends OW_Component
             ->setActive(OW::getRequest()->getRequestUri() == OW::getRouter()->uriForRoute('blog-manage-drafts'))
             ->setIconClass('ow_ic_geer_wheel');
 
-        $item[2] = new BASE_MenuItem();
+        //SPOD's blogs: hide comments fro each  post
+        /*$item[2] = new BASE_MenuItem();
 
         $item[2]->setLabel($language->text('blogs', 'manage_page_menu_comments'))
             ->setOrder(2)
             ->setKey(2)
             ->setUrl(OW::getRouter()->urlForRoute('blog-manage-comments'))
             ->setActive(OW::getRequest()->getRequestUri() == OW::getRouter()->uriForRoute('blog-manage-comments'))
-            ->setIconClass('ow_ic_comment');
+            ->setIconClass('ow_ic_comment');*/
 
         $menu = new BASE_CMP_ContentMenu($item);
 

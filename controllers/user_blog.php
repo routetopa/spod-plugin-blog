@@ -157,7 +157,7 @@ class BLOGS_CTRL_UserBlog extends OW_ActionController
             $itemsCount = $service->countUserPost($author->getId());
 
             // meta info
-            $vars = BOL_SeoService::getInstance()->getUserMetaInfo($author);
+           //12-07-2017 $vars = BOL_SeoService::getInstance()->getUserMetaInfo($author);
 
             $eParams = array(
                 "sectionKey" => "blogs",
@@ -165,7 +165,7 @@ class BLOGS_CTRL_UserBlog extends OW_ActionController
                 "title" => "blogs+meta_title_user_blog",
                 "description" => "blogs+meta_desc_user_blog",
                 "keywords" => "blogs+meta_keywords_user_blog",
-                "vars" => $vars
+                //"vars" => $vars
             );
 
             OW::getEventManager()->trigger(new OW_Event("base.provide_page_meta_info", $eParams));
@@ -249,7 +249,8 @@ class BLOGS_CTRL_UserBlog extends OW_ActionController
                 }
             }
 
-            $this->assign('tb', $tb);
+            //SPOD's blogs: hide comment
+           //$this->assign('tb', $tb);
         }
 
         $this->assign('list', $posts);

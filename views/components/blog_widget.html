@@ -17,7 +17,8 @@
 		{capture assign="moreLink"}<a class="ow_lbutton" href="{$post.url}">{text key='blogs+more'}</a>{/capture}
 
 		{capture assign='content'}
-			{if $commentInfo[$dto->id] > 0}
+			<!-- SPOD's blogs: hide comments-->
+			<!--{if $commentInfo[$dto->id] > 0}
 				<div class="ow_small ow_smallmargin">
 					<span class="ow_txt_value">
 						{$commentInfo[$dto->id]}
@@ -26,7 +27,7 @@
 						{text key='blogs+toolbar_comments'}
 					</a>
 				</div>
-			{/if}
+			{/if}-->
 			<div class="ow_smallmargin">{if $post.truncated}{$post.text|strip_tags}... {$moreLink}{else}{$post.text|strip_tags}{/if}</div>
 		{/capture}
 

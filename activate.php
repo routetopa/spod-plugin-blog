@@ -52,9 +52,10 @@ $credits = new BLOGS_CLASS_Credits();
 $credits->triggerCreditActionsAdd();
 
 // register sitemap entities
-BOL_SeoService::getInstance()->addSitemapEntity('blogs', 'blogs_sitemap', 'blogs', array(
+// 12-06-2017 not align with version Oxwall 1.8.2
+/*BOL_SeoService::getInstance()->addSitemapEntity('blogs', 'blogs_sitemap', 'blogs', array(
     'blogs_list',
     'blogs_post_list',
     'blogs_post_authors',
     'blogs_tags',
-), 'blogs_sitemap_desc');
+), 'blogs_sitemap_desc');*/

@@ -185,7 +185,8 @@ class BLOGS_CTRL_View extends OW_ActionController
                     'prev' => (!empty($prevUser) ) ? OW::getRouter()->urlForRoute('user-post', array('id' => $prev->getId(), 'user' => $prevUser->getUsername())) : '',
                     //Blog Home btn - shows Blogs home
                     //'index' => OW::getRouter()->urlForRoute('user-blog', array('user' => $author->getUsername()))
-                    'index' => OW::getRouter()->urlForRoute('blogs', array('user' => $author->getUsername()))
+                    'index' => OW::getRouter()->urlForRoute('user-blog', array('user' => $author->getUsername()))
+                    //12-07-2017 'index' => OW::getRouter()->urlForRoute('blogs', array('user' => $author->getUsername()))
                 )
             );
         }

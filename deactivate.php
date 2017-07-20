@@ -33,5 +33,5 @@ OW::getNavigation()->deleteMenuItem('blogs', 'main_menu_item');
 BOL_ComponentAdminService::getInstance()->deleteWidget('BLOGS_CMP_UserBlogWidget');
 BOL_ComponentAdminService::getInstance()->deleteWidget('BLOGS_CMP_BlogWidget');
 
-// remove from sitemap
-BOL_SeoService::getInstance()->removeSitemapEntity('blogs');
+// remove from sitemap 13-07-2017 not align with Oxwall version
+// BOL_SeoService::getInstance()->removeSitemapEntity('blogs');
